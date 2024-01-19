@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-rxeneqhpp78@*!@c29!yo8mob3n#_x4cxrlczfrdao0!2!ezgy
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-empzsolt-myfourthprojec-etsimsau93v.ws-eu107.gitpod.io',
-                '.herokuapp.com'
-                ]
+                '.herokuapp.com',]
 
 
 # Application definition
