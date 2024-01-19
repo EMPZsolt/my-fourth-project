@@ -19,6 +19,6 @@ from django.urls import path
 from home.views import my_salon
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('home/', my_salon, name='home'),
+    path('admin/', admin.site.urls),
 ]
