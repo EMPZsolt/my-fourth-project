@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
-{% load static %}
 
 {% block content %}
-    <div class="hero-section">
-        <img src="{% static 'images/hero-image.jpg' %}" alt="Hero Image">
-        <button class="booking-button">Book Now</button>
+  <div class="hero-section">
+    <img src="{% static 'images/hero-image.jpg' %}" alt="Hero Image">
+    <div class="logo text-center">
+      <h1>Hair by Budu</h1>
     </div>
+    <a href="{% url 'booking' %}" class="booking-button btn btn-primary btn-lg float-end">Book Now</a>
+  </div>
 {% endblock %}
