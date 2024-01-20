@@ -44,7 +44,7 @@
                         <a class="nav-link {% if request.path == '' %}active{% endif %}" aria-current="page"
                             href="">Information</a>
                         <a class="nav-link {% if request.path == '' %}active{% endif %}" aria-current="page"
-                            href="">Booking</a>
+                            href="{% url 'book_service' %}">Booking</a>
                     </li>
                     
                 </ul>
