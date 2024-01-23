@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Book a Service</h2>
-  <form method="post" action="{% url 'book_service' %}">
+  <h2>Book a Haircut</h2>
+  <form method="post" action="{% url 'booking' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Book Now</button>
