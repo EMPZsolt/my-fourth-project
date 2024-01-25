@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 col-md-4 text-center">
+            <img src="" width="75%">
+        </div>
+        <div class="col-12 col-md-8">
+            <h2>{{ about.title }}</h2>
+            {{ about.content | safe }}
+        </div>
+    </div>
+</div>
+{% endblock content %}
