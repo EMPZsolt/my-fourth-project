@@ -61,3 +61,17 @@ body {
     font-size: 1.5rem;
     margin-right: 5px;
 }
+
+/* Home page*/
+
+.hero-section {
+    background-image: url("https://res.cloudinary.com/dwnzsvuln/image/upload/v1706230562/hbb1_tymcfo.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+/* About page*/
+
+.profile-image {
+    width: 75%;
+}

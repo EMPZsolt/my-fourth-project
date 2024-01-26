@@ -4,6 +4,7 @@ body {
 
 .navbar {
     border-bottom: 1px solid #ddd;
+    height: 80px;
 }
 
 .navbar-brand {
@@ -60,4 +61,34 @@ body {
 .footer i {
     font-size: 1.5rem;
     margin-right: 5px;
+}
+
+/* Home page*/
+
+.hero-section {
+    background-image: url('https://res.cloudinary.com/dwnzsvuln/image/upload/v1706230562/hbb1_tymcfo.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 3.5rem - 6rem);
+    position: relative;
+    z-index: -1;
+}
+
+.container h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.alert {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* About page*/
+
+.profile-image {
+    width: 75%;
 }

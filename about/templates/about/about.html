@@ -6,7 +6,11 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-12 col-md-4 text-center">
-            <img src="" width="75%">
+            {% if "placeholder" in about.profile_image.url %}
+            <img src="{% static 'images/Hairbybudu-logo.png' %}" class="profile-image" alt="Hair by Budu">
+            {% else %}
+            <img src="{{ about.profile_image.url }}" class="profile-image" alt="Marisa Speidel">
+            {% endif %}
         </div>
         <div class="col-12 col-md-8">
             <h2>{{ about.title }}</h2>
