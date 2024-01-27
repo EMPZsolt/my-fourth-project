@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="flex-shrink-0 main-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Hair Salon Slide Show -->
+                <div id="hairSalonCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://res.cloudinary.com/dwnzsvuln/image/upload/v1706230562/hbb5_dqfip4.webp"
+                                class="d-block w-100" alt="Hair Salon Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/dwnzsvuln/image/upload/v1706230562/hbb3_wgmqnd.webp"
+                                class="d-block w-100" alt="Hair Salon Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/dwnzsvuln/image/upload/v1706230562/hbb2_mhdukr.webp"
+                                class="d-block w-100" alt="Hair Salon Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/dwnzsvuln/image/upload/v1706230562/hbb1_tymcfo.webp"
+                                class="d-block w-100" alt="Hair Salon Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/dwnzsvuln/image/upload/v1706230562/hbb4_dinitl.webp"
+                                class="d-block w-100" alt="Hair Salon Image 2">
+                        </div>
+                        
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hairSalonCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#hairSalonCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Hairstyles Slide Show -->
+                <div id="hairstylesCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://res.cloudinary.com/your-cloudinary-link/image/upload/v1234567890/hairstyle_1.jpg"
+                                class="d-block w-100" alt="Hairstyle Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://res.cloudinary.com/your-cloudinary-link/image/upload/v1234567890/hairstyle_2.jpg"
+                                class="d-block w-100" alt="Hairstyle Image 2">
+                        </div>
+                        
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#hairstylesCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#hairstylesCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
