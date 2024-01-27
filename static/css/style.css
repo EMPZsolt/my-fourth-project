@@ -101,3 +101,58 @@ body {
 .profile-image {
     width: 75%;
 }
+
+/* Gallery Page*/
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-container .gallery-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.gallery-container .gallery-column h3 {
+    text-align: center;
+}
+
+.gallery-container .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.gallery-container .slideshow-container img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.gallery-container .prev,
+.gallery-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.gallery-container .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.gallery-container .prev:hover,
+.gallery-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
