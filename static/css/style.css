@@ -21,7 +21,7 @@ body {
     font-size: 20px;
     font-weight: 600;
     color: #4A4A4F !important;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link.active,
@@ -35,13 +35,18 @@ body {
     margin: 0;
 }
 
+.nav-item {
+    list-style: none;
+}
+
 .navbar-icons a {
     font-size: 24px;
     color: #4A4A4F;
     text-decoration: none;
     list-style-type: none;
-    font-size: 0.8rem;
-    line-height: 0.25;
+    list-style: none;
+    font-size: 1rem;
+    line-height: 0.2;
 }
 
 .navbar-icons ul.navbar-nav {
