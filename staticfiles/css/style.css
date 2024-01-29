@@ -21,7 +21,7 @@ body {
     font-size: 20px;
     font-weight: 600;
     color: #4A4A4F !important;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link.active,
@@ -35,13 +35,18 @@ body {
     margin: 0;
 }
 
+.nav-item {
+    list-style: none;
+}
+
 .navbar-icons a {
     font-size: 24px;
     color: #4A4A4F;
     text-decoration: none;
     list-style-type: none;
-    font-size: 0.8rem;
-    line-height: 0.25;
+    list-style: none;
+    font-size: 1rem;
+    line-height: 0.2;
 }
 
 .navbar-icons ul.navbar-nav {
@@ -100,4 +105,71 @@ body {
 
 .profile-image {
     width: 75%;
+}
+
+/* Gallery page*/
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-container .gallery-column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.gallery-container .gallery-column h3 {
+    text-align: center;
+}
+
+.gallery-container .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.gallery-container .slideshow-container img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.gallery-container .prev,
+.gallery-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.gallery-container .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.gallery-container .prev:hover,
+.gallery-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Information page */
+
+.service-section {
+    border: 2px solid #000; /* Add border */
+    padding: 20px; /* Add padding */
+    margin-bottom: 20px; /* Add margin for separation */
+}
+
+.service-section h2 {
+    margin-top: 0; /* Remove default margin */
 }

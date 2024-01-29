@@ -4,6 +4,7 @@
 {% url 'about' as about_url %}
 {% url 'booking' as booking_url %}
 {% url 'gallery' as gallery_url %}
+{% url 'information' as information_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -56,10 +57,12 @@
                             href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == 'gallery_url' %}active{% endif %}" href="{% url 'gallery' %}">Gallery</a>
+                        <a class="nav-link {% if request.path == 'gallery_url' %}active{% endif %}"
+                            href="{% url 'gallery' %}">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == '' %}active{% endif %}" href="">Information</a>
+                        <a class="nav-link {% if request.path == 'information_url' %}active{% endif %}"
+                            href="{% url 'information' %}">Information</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == booking_url %}active{% endif %}"
