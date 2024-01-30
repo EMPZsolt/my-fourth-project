@@ -7,4 +7,20 @@
     {{ form.as_p }}
     <button type="submit">Book Now</button>
   </form>
+
+  <!-- Display reservations for logged-in user -->
+  {% if user.is_authenticated %}
+    <h3>Your Reservations</h3>
+    {% if user.bookings.all %}
+      <ul>
+        {% for booking in user.bookings.all %}
+          <li>{{ booking.name }} - {{ booking.date_preference }} - {{ booking.time_preference }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>You don't have any reservations yet.</p>
+    {% endif %}
+  {% else %}
+    <p>Please <a href="{% url 'account_login' %}">log in</a> to view your reservations.</p>
+  {% endif %}
 {% endblock %}
