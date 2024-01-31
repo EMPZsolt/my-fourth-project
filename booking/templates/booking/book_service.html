@@ -1,26 +1,28 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
-  <h2>Book a Haircut</h2>
-  <form method="post" action="{% url 'booking' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Book Now</button>
-  </form>
+<h2>Book a Haircut</h2>
+<form method="post" action="{% url 'booking' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Book Now</button>
+</form>
 
-  <!-- Display reservations for logged-in user -->
-  {% if user.is_authenticated %}
-    <h3>Your Reservations</h3>
-    {% if user.bookings.all %}
-      <ul>
-        {% for booking in user.bookings.all %}
-          <li>{{ booking.name }} - {{ booking.date_preference }} - {{ booking.time_preference }}</li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p>You don't have any reservations yet.</p>
-    {% endif %}
-  {% else %}
-    <p>Please <a href="{% url 'account_login' %}">log in</a> to view your reservations.</p>
-  {% endif %}
+<!-- Display already booked bookings -->
+<h3>Your Bookings</h3>
+{% if bookings %}
+<ul>
+  {% for booking in bookings %}
+  <li>
+    {{ booking.name }} - {{ booking.date_preference }} - {{ booking.time_preference }}
+    <a href="{% url 'modify_booking' booking.pk %}">Modify</a> |
+    <a href="{% url 'delete_booking' booking.pk %}">Delete</a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No bookings yet.</p>
+{% endif %}
 {% endblock %}

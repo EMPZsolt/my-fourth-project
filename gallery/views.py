@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .models import HairSalonImage, HairstyleImage
+from .models import SalonImage, HairstyleImage
 
 def gallery_page(request):
-    hair_salon_images = HairSalonImage.objects.all()
+    salon_images = SalonImage.objects.all()
     hairstyle_images = HairstyleImage.objects.all()
-    return render(request, 'gallery/gallery_page.html', {'hair_salon_images': hair_salon_images, 'hairstyle_images': hairstyle_images})
+    return render(request, 'gallery/gallery_page.html', {'salon_images': salon_images, 'hairstyle_images': hairstyle_images})

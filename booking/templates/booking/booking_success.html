@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-  <h2>Successful booking request. I will send you feedback the next business day to confirm.</h2>
-  <p>Thank you for booking with me.</p>
-  
+  <div id="booking-success-message" style="display: none;">
+    <h3>Successful booking request. I will send you feedback the next business day to confirm.</h3>
+    <p>Thank you for booking with me.</p>
+  </div>
+  <div id="booking-update-success-message" style="display: none;">
+    <h3>Booking updated successfully! I will send you feedback the next business day to confirm.</h3>
+    <p>Thank you for booking with me.</p>
+  </div>
 {% endblock %}

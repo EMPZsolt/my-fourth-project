@@ -16,7 +16,10 @@ def book_service(request):
             return redirect('booking_success')
     else:
         form = BookingForm()
-    return render(request, 'booking/book_service.html', {'form': form})
+    
+    # Get the user's bookings
+    bookings = Booking.objects.filter(user=request.user)
+    return render(request, 'booking/book_service.html', {'form': form, 'bookings': bookings})
 
 @login_required
 def booking_success(request):
@@ -25,4 +28,26 @@ def booking_success(request):
 @login_required
 def booking_detail(request, pk):
     booking = get_object_or_404(Booking, pk=pk, user=request.user)
-    return render(request, 'booking/booking_detail.html', {'booking': booking})
+    form = BookingForm(instance=booking)
+    return render(request, 'booking/booking_detail.html', {'form': form, 'booking': booking})
+
+@login_required
+def modify_booking(request, pk):
+    booking = get_object_or_404(Booking, pk=pk, user=request.user)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('booking_success')
+    else:
+        form = BookingForm(instance=booking)
+    return render(request, 'booking/booking_detail.html', {'form': form, 'booking': booking})
+
+@login_required
+def delete_booking(request, pk):
+    booking = get_object_or_404(Booking, pk=pk, user=request.user)
+    if request.method == 'POST':
+        booking.delete()
+        messages.success(request, 'Booking deleted successfully.')
+        return redirect('book_service')
+    return render(request, 'booking/book_service.html', {'booking': booking})

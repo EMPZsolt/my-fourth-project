@@ -113,6 +113,38 @@ body {
 
 /* Gallery page */
 
+.pictures-title {
+    padding-top: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: normal;
+    justify-content: flex-start;
+    width: 90%;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%; /* Nyilak felső szélét 50%-ra pozícionáljuk */
+    transform: translateY(-50%); /* Nyilak középre igazítása a kereten belül */
+}
+
 .gallery-container {
     display: flex;
     justify-content: space-between;

@@ -1,7 +1,8 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
-class HairSalonImage(models.Model):
-    image = models.ImageField(upload_to='hair_salon_images/')
+class SalonImage(models.Model):
+    salon_image = CloudinaryField('image', default='placeholder')
 
 class HairstyleImage(models.Model):
-    image = models.ImageField(upload_to='hairstyle_images/')
+    hairstyle_image = CloudinaryField('image', default='placeholder')
