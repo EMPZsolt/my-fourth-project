@@ -2,12 +2,25 @@
 {% load static %}
 
 {% block content %}
-  <div id="booking-success-message" style="display: none;">
-    <h3>Successful booking request. I will send you feedback the next business day to confirm.</h3>
-    <p>Thank you for booking with me.</p>
+  <div class="container">
+    <div class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          Booking successful! Thank you.
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
   </div>
-  <div id="booking-update-success-message" style="display: none;">
-    <h3>Booking updated successfully! I will send you feedback the next business day to confirm.</h3>
-    <p>Thank you for booking with me.</p>
-  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toastEl = document.querySelector('.toast');
+      var toast = new bootstrap.Toast(toastEl);
+
+      toast.show();
+    });
+  </script>
 {% endblock %}

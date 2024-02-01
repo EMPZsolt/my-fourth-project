@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 
 @login_required
@@ -48,6 +50,6 @@ def delete_booking(request, pk):
     booking = get_object_or_404(Booking, pk=pk, user=request.user)
     if request.method == 'POST':
         booking.delete()
-        messages.success(request, 'Booking deleted successfully.')
-        return redirect('book_service')
-    return render(request, 'booking/book_service.html', {'booking': booking})
+        messages.add_message(request, messages.SUCCESS, 'Booking deleted successfully.')
+        return redirect('booking')
+    return HttpResponseRedirect(reverse('booking'))

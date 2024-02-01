@@ -30,7 +30,7 @@ body {
     color: #008998 !important;
 }
 
-.navbar-icons ul {
+.navbar-message ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -63,6 +63,14 @@ body {
     flex: 1;
 }
 
+.alert {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
 /* Footer */
 
 .footer {
@@ -83,26 +91,50 @@ body {
 
 /* Home page */
 
+#hero-outer {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
 .hero-section {
     background-image: url('https://res.cloudinary.com/dwnzsvuln/image/upload/v1706230562/hbb1_tymcfo.webp');
     background-size: cover;
     background-position: center;
-    min-height: calc(100vh - 3.5rem - 6rem);
+    background-attachment: fixed;
+    min-height: calc(100vh);
     position: relative;
+    overflow: hidden;
     z-index: -1;
+
+    /* animates zoom effect on loading page */
+    animation-name: hero-zoom;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
 }
 
-.container h2 {
-    position: relative;
-    z-index: 1;
+/* creates the level of zoom for hero image */
+@keyframes hero-zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
 }
 
-.alert {
+.home-page-container {
     position: absolute;
-    bottom: 0;
+    top: 14%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     z-index: 2;
+}
+
+.home-page-container h1 {
+    font-size: 2.5rem;
+    padding-top: 6rem;
 }
 
 /* About page */
@@ -141,8 +173,8 @@ body {
 
 .carousel-control-prev,
 .carousel-control-next {
-    top: 50%; /* Nyilak felső szélét 50%-ra pozícionáljuk */
-    transform: translateY(-50%); /* Nyilak középre igazítása a kereten belül */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .gallery-container {
@@ -223,4 +255,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* Booking page */
+
+.btn-primary {
+    color: #fff;
+    background-color:#008998;
 }
