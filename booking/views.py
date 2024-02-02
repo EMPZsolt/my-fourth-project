@@ -5,6 +5,8 @@ from .forms import BookingForm
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import permission_required
+
 
 @login_required
 def book_service(request):
@@ -15,7 +17,7 @@ def book_service(request):
             booking.user = request.user
             booking.save()
             messages.success(request, 'Booking successful! Thank you.')
-            return redirect('booking_success')
+            return redirect('booking')
     else:
         form = BookingForm()
     
@@ -34,18 +36,21 @@ def booking_detail(request, pk):
     return render(request, 'booking/booking_detail.html', {'form': form, 'booking': booking})
 
 @login_required
+@permission_required('auth.change_booking', raise_exception=True)
 def modify_booking(request, pk):
     booking = get_object_or_404(Booking, pk=pk, user=request.user)
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            return redirect('booking_success')
+            messages.add_message(request, messages.SUCCESS, 'Booking successfully modified.')
+            return redirect('booking')
     else:
         form = BookingForm(instance=booking)
     return render(request, 'booking/booking_detail.html', {'form': form, 'booking': booking})
 
 @login_required
+@permission_required('auth.delete_booking', raise_exception=True)
 def delete_booking(request, pk):
     booking = get_object_or_404(Booking, pk=pk, user=request.user)
     if request.method == 'POST':

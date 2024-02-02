@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 Internal Server Error</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="error-code">500</div>
+    <div class="error-message">Internal Server Error</div>
+    <p>Sorry, something went wrong on the server.</p>
+    <p><a href="{% url 'home' %}">Back to Home</a></p>
+</body>
+</html>

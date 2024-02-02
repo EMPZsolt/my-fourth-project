@@ -40,15 +40,3 @@ deleteButtons.forEach(button => {
         deleteModal.show();
     });
 });
-
-// JavaScript function to display booking success message
-function displayBookingSuccessMessage() {
-  const isUpdated = document.getElementById('booking-success-message').dataset.bookingUpdated === 'true';
-  if (isUpdated) {
-    document.getElementById('booking-update-success-message').style.display = 'block';
-  } else {
-    document.getElementById('booking-success-message').style.display = 'block';
-  }
-}
-
-displayBookingSuccessMessage();
