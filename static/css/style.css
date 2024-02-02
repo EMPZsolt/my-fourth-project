@@ -1,10 +1,18 @@
 body {
     background-color: #776a6a;
+    margin-bottom: 120px;
 }
 
 .navbar {
     border-bottom: 1px solid #ddd;
     height: 80px;
+}
+
+#navbar-holder {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .navbar-brand {
@@ -39,6 +47,10 @@ body {
     list-style: none;
 }
 
+.navbar-icons {
+    margin-bottom: -14px;
+}
+
 .navbar-icons a {
     font-size: 24px;
     color: #4A4A4F;
@@ -58,16 +70,29 @@ body {
     outline: none;
 }
 
+.nav-items-holder {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-content: space-between;
+
+}
+
+.navbar-collapse-button {
+    display: flex;
+    justify-content: center;
+    margin: 0 40px;
+}
+
 .content {
     flex: 1;
 }
 
 .alert {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
     text-align: center;
+    padding-top: 4rem;
+    font-size: x-large;
+    color: #23c0d2;
 }
 
 /* Footer */
@@ -87,12 +112,39 @@ body {
     margin-right: 5px;
 }
 
+/* Login page*/
+
+#signup-link {
+    color: #008998;
+}
+
+#signin-button {
+    background-color: #008998;
+}
+
+/* Logout page */
+
+#signout-button {
+    background-color: #008998;
+}
+
+/* Register page */
+
+#signin-link {
+    color: #008998;
+}
+
+#signup-button {
+    background-color: #008998;
+}
+
 /* Home page */
 
 #hero-outer {
     width: 100%;
     height: 800px;
     overflow: hidden;
+    margin-bottom: -120px;
 }
 
 .hero-section {
@@ -131,8 +183,28 @@ body {
 }
 
 .home-page-container h1 {
-    font-size: 2.5rem;
-    padding-top: 6rem;
+    font-size: 3rem;
+    padding-top: 16rem;
+    font-weight: 600;
+    font-family: ui-monospace;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.home-page-container span {
+    color: #008998;
 }
 
 /* About page */
@@ -141,10 +213,15 @@ body {
     width: 75%;
 }
 
+.about-page p {
+    color: #fff2f2;
+}
+
 /* Gallery page */
 
 .pictures-title {
     padding-top: 10px;
+    font-family: revert-layer;
 }
 
 .carousel-inner {
@@ -241,6 +318,14 @@ body {
     margin-top: 0;
 }
 
+.info-page ul {
+    color: #fff2f2;
+}
+
+.info-page p {
+    color: #fff2f2;
+}
+
 .main-bg {
     padding-bottom: 10px;
 }
@@ -258,8 +343,11 @@ body {
 /* Booking page */
 
 .booking-container {
-    margin-bottom: 120px;
     padding: 0 2rem;
+}
+
+.col li {
+    padding-bottom: 10px;
 }
 
 .btn-primary {
