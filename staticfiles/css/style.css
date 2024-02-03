@@ -378,6 +378,7 @@ body {
 .info-page ul {
     color: #487351;
     font-weight: 600;
+    list-style: none;
 }
 
 .info-page p {
