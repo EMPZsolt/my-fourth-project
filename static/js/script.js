@@ -4,7 +4,6 @@ const editButtons = document.querySelectorAll(".btn-warning");
 const deleteButtons = document.querySelectorAll(".btn-danger");
 
 // Delete modal
-const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteConfirm = document.getElementById("deleteConfirm");
 
 // Edit functionality

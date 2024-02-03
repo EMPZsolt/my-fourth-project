@@ -2,9 +2,10 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+
 {% block content %}
-  <!-- displaying Django messages -->
-  <div class="container">
+<!-- displaying Django messages -->
+<div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
             {% for message in messages %}
@@ -17,6 +18,7 @@
         </div>
     </div>
 </div>
+
 <!-- Display already booked bookings -->
 <div class="container booking-container">
     <div class="row mt-5">
@@ -62,7 +64,6 @@
                                     <div class="toast liveToast" role="alert" aria-live="assertive" aria-atomic="true"
                                         data-bs-autohide="false">
                                         <div class="toast-header">
-                                            <img src="..." class="rounded me-2" alt="...">
                                             <strong class="me-auto">Bootstrap</strong>
                                             <small>11 mins ago</small>
                                             <button type="button" class="btn-close" data-bs-dismiss="toast"
@@ -98,7 +99,6 @@
                     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
                         <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
                             <div class="toast-header">
-                                <img src="..." class="rounded me-2" alt="...">
                                 <strong class="me-auto">Bootstrap</strong>
                                 <small>11 mins ago</small>
                                 <button type="button" class="btn-close" data-bs-dismiss="toast"
@@ -115,19 +115,8 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
 
 {% block scripts %}
 <script src="{% static 'js/script.js' %}"></script>
-
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var liveToast = document.querySelector('.liveToast');
-        var toast = new bootstrap.Toast(liveToast);
-        toast.show();
-    });
-</script>
-
 {% endblock %}

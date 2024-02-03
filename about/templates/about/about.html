@@ -6,6 +6,8 @@
 <div class="container mt-5 about-page">
     <div class="row">
         <div class="col-12 col-md-4 text-center">
+
+            <!-- Salon image -->
             <div class="row">
                 <div class="col-12 text-center">
                     {% if "placeholder" in about.salon_image.url %}
@@ -16,6 +18,8 @@
                     <p class="profile-description">{{ about.salon_name }}</p>
                 </div>
             </div>
+
+            <!-- Owner profile image -->
             <div class="row">
                 <div class="col-12 text-center">
                     {% if "placeholder" in about.profile_image.url %}
@@ -27,6 +31,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- About content -->
         <div class="col-12 col-md-8">
             <h2>{{ about.title }}</h2>
             {{ about.content | safe }}

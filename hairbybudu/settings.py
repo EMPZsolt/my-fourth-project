@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-empzsolt-myfourthprojec-etsimsau93v.ws-eu107.gitpod.io',
                 '.herokuapp.com',]
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'django_summernote',
     'cloudinary',
+    'bootstrap_datepicker_plus',
     'home',
     'about',
     'gallery',
@@ -65,6 +66,17 @@ LOGOUT_REDIRECT_URL = '/'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+BOOTSTRAP_DATEPICKER_PLUS = {
+    "options": {
+        "language": "en",
+    },
+    "variant_options": {
+        "date": {
+            "format": "MM/DD/YYYY",
+        },
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
