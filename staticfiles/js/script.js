@@ -1,15 +1,9 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-  var text = document.getElementById('haircut-text');
-  text.classList.add('show');
-});
-
 // Edit and delete buttons
-const editButtons = document.querySelectorAll(".btn-edit");
-const deleteButtons = document.querySelectorAll(".btn-delete");
+const editButtons = document.querySelectorAll(".btn-warning");
+const deleteButtons = document.querySelectorAll(".btn-danger");
 
 // Delete modal
-const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteConfirm = document.getElementById("deleteConfirm");
 
 // Edit functionality
@@ -45,15 +39,3 @@ deleteButtons.forEach(button => {
         deleteModal.show();
     });
 });
-
-// JavaScript function to display booking success message
-function displayBookingSuccessMessage() {
-  const isUpdated = document.getElementById('booking-success-message').dataset.bookingUpdated === 'true';
-  if (isUpdated) {
-    document.getElementById('booking-update-success-message').style.display = 'block';
-  } else {
-    document.getElementById('booking-success-message').style.display = 'block';
-  }
-}
-
-displayBookingSuccessMessage();

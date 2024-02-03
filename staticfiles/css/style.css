@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Kaushan+Script&display=swap');
+
+
 body {
     background-color: #776a6a;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
 .navbar {
     border-bottom: 1px solid #ddd;
     height: 80px;
+    z-index: 10;
+}
+
+#navbar-holder {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .navbar-brand {
@@ -30,7 +41,7 @@ body {
     color: #008998 !important;
 }
 
-.navbar-icons ul {
+.navbar-message ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -38,6 +49,10 @@ body {
 
 .nav-item {
     list-style: none;
+}
+
+.navbar-icons {
+    margin-bottom: -14px;
 }
 
 .navbar-icons a {
@@ -59,16 +74,29 @@ body {
     outline: none;
 }
 
+.nav-items-holder {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-content: space-between;
+
+}
+
+.navbar-collapse-button {
+    display: flex;
+    justify-content: center;
+    margin: 0 40px;
+}
+
 .content {
     flex: 1;
 }
 
 .alert {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
+    text-align: center;
+    padding-top: 4rem;
+    font-size: x-large;
+    color: #23c0d2;
 }
 
 /* Footer */
@@ -79,14 +107,39 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    padding: 20px 0;
 }
 
 .footer i {
     font-size: 1.5rem;
     margin-right: 5px;
+}
+
+/* Login page*/
+
+#signup-link {
+    color: #008998;
+}
+
+#signin-button {
+    background-color: #008998;
+}
+
+/* Logout page */
+
+#signout-button {
+    background-color: #008998;
+}
+
+/* Register page */
+
+#signin-link {
+    color: #008998;
+}
+
+#signup-button {
+    background-color: #008998;
 }
 
 /* Home page */
@@ -95,6 +148,7 @@ body {
     width: 100%;
     height: 800px;
     overflow: hidden;
+    margin-bottom: -120px;
 }
 
 .hero-section {
@@ -133,18 +187,28 @@ body {
 }
 
 .home-page-container h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    padding-top: 16rem;
+    font-weight: 600;
+    font-family: "Kaushan Script", sans-serif;
 }
 
-#haircut {
-    opacity: 0; /* Kezdetben a szöveg átlátszatlan */
-    transform: translateY(-50px); /* Kezdetben a szöveg -50px-el van eltolva felfelé */
-    transition: opacity 1s ease, transform 1s ease; /* Animációs áttűnés és eltolás */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
 }
 
-#haircut.show {
-    opacity: 1; /* A szöveg átláthatósága 1-re vált, amikor megjelenik */
-    transform: translateY(0); /* A szöveg visszatér a normál helyzetébe */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.home-page-container span {
+    color: #008998;
 }
 
 /* About page */
@@ -153,20 +217,35 @@ body {
     width: 75%;
 }
 
+.about-page p {
+    color: #fff2f2;
+}
+
 /* Gallery page */
 
+.gallery-page {
+    font-family: "Kaushan Script", sans-serif;
+}
+
 .pictures-title {
-    padding-top: 10px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: revert-layer;
+}
+
+.picture-sides {
+    padding-left: 4rem
 }
 
 .carousel-inner {
     display: flex;
     align-items: normal;
     justify-content: flex-start;
-    width: 90%;
+    width: 85%;
     height: 550px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .carousel-inner img {
@@ -242,15 +321,67 @@ body {
 
 /* Information page */
 
-.service-section {
-    border: 2px solid #000;
-    padding: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+.info-page h2 {
+    font-family: "Kaushan Script", sans-serif;
 }
 
+.service-section {
+    padding: 40px;
+    margin: 20px 0;
+}
+
+.frame-holder {
+    height: 100%;
+    background-color:#ddc;
+    border:solid 5vmin #eee;
+    border-bottom-color:#fff;
+    border-left-color:#eee;
+    border-radius:2px;
+    border-right-color:#eee;
+    border-top-color:#ddd;
+    box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+    box-sizing:border-box;
+    display:inline-block;
+    position:relative;
+    text-align:center;
+    &:before {
+        border-radius:2px;
+        bottom:-2vmin;
+        box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+        content:"";
+        left:-2vmin;
+        position:absolute;
+        right:-2vmin;
+        top:-2vmin;
+    }
+    &:after {
+        border-radius:2px;
+        bottom:-2.5vmin;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+        content:"";
+        left:-2.5vmin;
+        position:absolute;
+        right:-2.5vmin;
+        top:-2.5vmin;
+    }
+}
+
+.service-list {
+    flex: 1;
+    padding: 20px;
+    color: #ba8672;
+}
 .service-section h2 {
     margin-top: 0;
+}
+
+.info-page ul {
+    color: #487351;
+    font-weight: 600;
+}
+
+.info-page p {
+    color: #fff2f2;
 }
 
 .main-bg {
@@ -269,7 +400,60 @@ body {
 
 /* Booking page */
 
+.booking-container {
+    padding: 0 2rem;
+}
+
+.col li {
+    padding-bottom: 10px;
+    color: #ffefef;
+    font-weight: 600;
+    font-size: larger;
+}
+
 .btn-primary {
     color: #fff;
     background-color:#008998;
+}
+
+.btn-warning {
+    font-weight: 600;
+}
+
+.btn-danger {
+    font-weight: 600;
+}
+
+.btn-success {
+    font-weight: 600;
+}
+
+/*Modify booking page*/
+
+.modify-booking {
+margin-top: 15px;
+}
+
+/* 403 */
+
+.error-code {
+    font-size: 72px;
+    color: #dc3545;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
 }
