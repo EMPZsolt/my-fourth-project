@@ -227,14 +227,16 @@ body {
     font-family: "Kaushan Script", sans-serif;
 }
 
+.slide-show {
+    display: flex;
+    align-items: normal;
+    justify-content: space-around;
+}
+
 .pictures-title {
     padding: 20px 0;
     text-align: center;
     font-family: revert-layer;
-}
-
-.picture-sides {
-    padding-left: 4rem
 }
 
 .carousel-inner {
@@ -402,7 +404,7 @@ body {
 /* Booking page */
 
 .booking-container {
-    padding: 0 2rem;
+    padding: 0 15rem;
 }
 
 .col li {
