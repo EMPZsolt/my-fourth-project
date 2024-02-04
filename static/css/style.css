@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Kaushan+Script&display=swap');
-
-
 body {
     background-color: #776a6a;
     margin-bottom: 120px;
@@ -188,9 +185,9 @@ body {
 
 .home-page-container h1 {
     font-size: 3rem;
-    padding-top: 16rem;
+    padding-top: 10rem;
     font-weight: 600;
-    font-family: "Kaushan Script", sans-serif;
+    font-weight: bold;
 }
 
 .fade-in {
@@ -222,10 +219,6 @@ body {
 }
 
 /* Gallery page */
-
-.gallery-page {
-    font-family: "Kaushan Script", sans-serif;
-}
 
 .slide-show {
     display: flex;
@@ -323,10 +316,6 @@ body {
 
 /* Information page */
 
-.info-page h2 {
-    font-family: "Kaushan Script", sans-serif;
-}
-
 .service-section {
     padding: 40px;
     margin: 20px 0;
@@ -370,17 +359,18 @@ body {
 
 .service-list {
     flex: 1;
-    padding: 20px;
+    padding: 15px 0;
     color: #ba8672;
 }
-.service-section h2 {
-    margin-top: 0;
+.info-page h2 {
+    padding-bottom: 15px;
 }
 
 .info-page ul {
     color: #487351;
     font-weight: 600;
     list-style: none;
+    padding: inherit;
 }
 
 .info-page p {
@@ -392,6 +382,10 @@ body {
 }
 
 .location {
+    margin-bottom: 30px;
+}
+
+.map {
     margin-bottom: 30px;
 }
 

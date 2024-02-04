@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
+from datetime import date, timedelta
 
 class Booking(models.Model):
     SERVICE_CHOICES = [
@@ -20,3 +23,21 @@ class Booking(models.Model):
 
     def __str__(self):
         return f'{self.name} - {self.service_type} - {self.date_preference} {self.time_preference}'
+
+    def clean_date_preference(self):
+        date_preference = self.cleaned_data.get('date_preference')
+        if date_preference:
+            # Determine today's date
+            today = date.today()
+            # Add one day to today's date
+            next_day = today + timedelta(days=1)
+            
+            # Check if the selected date is on or after the next day
+            if next_day < date_preference:
+                raise ValidationError(_('Booking can only be made for the next business day.'))
+            
+            # Check if the selected date is Sunday, Monday, or Tuesday
+            weekday = date_preference.weekday()
+            if weekday in [6, 0, 1]:
+                raise ValidationError(_('Please select a booking for Wednesday or later.'))
+        return date_preference
