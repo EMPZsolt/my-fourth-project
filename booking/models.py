@@ -4,7 +4,11 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from datetime import date, timedelta
 
+
 class Booking(models.Model):
+    """
+    Model representing a booking for a service.
+    """
     SERVICE_CHOICES = [
         ('haircut', 'Haircut'),
         ('coloring', 'Coloring'),
@@ -22,9 +26,15 @@ class Booking(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
+        """
+        String representation of a booking.
+        """
         return f'{self.name} - {self.service_type} - {self.date_preference} {self.time_preference}'
 
     def clean_date_preference(self):
+        """
+        Custom validation for the date preference field.
+        """
         date_preference = self.cleaned_data.get('date_preference')
         if date_preference:
             # Determine today's date
@@ -37,7 +47,6 @@ class Booking(models.Model):
                 raise ValidationError(_('Booking can only be made for the next business day.'))
             
             # Check if the selected date is Sunday, Monday, or Tuesday
-            weekday = date_preference.weekday()
-            if weekday in [6, 0, 1]:
-                raise ValidationError(_('Please select a booking for Wednesday or later.'))
+            if date_preferece.weekday() in [6, 0, 1]:
+                raise ValidationError(_('Invalid date - cannot book on Sundays, Mondays, or Tuesdays'))
         return date_preference

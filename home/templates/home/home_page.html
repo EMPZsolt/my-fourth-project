@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% url 'booking' as booking_url %}
 
 {% block content %}
 <main class="flex-shrink-0 main-bg" id="hero-outer">
@@ -7,6 +9,7 @@
         <div class="home-page-container">
             <div class="row">
                 <div class="col-md-12 text-center">
+                    
 
                     <!-- displaying Django messages -->
                     <div class="container">
@@ -25,10 +28,21 @@
                     </div>
 
                     <!-- Welcome message -->
+                    
                     <h1 class="fade-in"><span>Welcome</span> to Hair <span>by</span> Budu</h1>
+
+                    <!-- Book Now button -->
+                    <div class="row justify-content-center">
+                        <!-- <div class="col-md-6 text-center">
+                            <a href="{% url 'booking' %}" class=" btn btn-primary btn-lg animate__animated animate__bounce">Book Now</a>
+                        </div> -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
+<div class="btn btn-lg animate__animated animate__bounce home-page-booking fade-in">
+    <a href="{% url 'booking' %}" class=" btn btn-primary btn-lg animate__animated animate__bounce">Book Now</a>
+</div>
 {% endblock %}
