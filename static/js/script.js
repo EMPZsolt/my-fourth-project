@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Check if the selected day is in the disabledDays array
             if (disabledDays.includes(selectedDay)) {
-                alert('Invalid date - cannot book on Sundays, Mondays, or Tuesdays.');
+                alert('Invalid date - we are closed on Sundays, Mondays, or Tuesdays.');
                 dateInput.value = ''; // Reset the input value
             }
         })

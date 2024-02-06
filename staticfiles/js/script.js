@@ -48,6 +48,7 @@ deleteButtons.forEach(button => {
 });
 
 
+// Validate and restrict date input to exclude Sundays, Mondays, and Tuesdays
 document.addEventListener('DOMContentLoaded', function() {
     // Define an array of disabled days (0: Sunday, 1: Monday, 2: Tuesday)
     const disabledDays = [0, 1, 2]; // Sundays, Mondays, Tuesdays are disabled
@@ -74,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Check if the selected day is in the disabledDays array
             if (disabledDays.includes(selectedDay)) {
-                alert('Invalid date - cannot book on Sundays, Mondays, or Tuesdays.');
+                alert('Invalid date - we are closed on Sundays, Mondays, or Tuesdays.');
                 dateInput.value = ''; // Reset the input value
             }
         })

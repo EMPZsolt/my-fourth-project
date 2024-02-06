@@ -140,12 +140,15 @@ body {
 }
 
 /* Home page */
+.home-page {
+    margin-bottom: -200px;
+}
 
 #hero-outer {
     width: 100%;
     height: 800px;
     overflow: hidden;
-    margin-bottom: -120px;
+    margin-bottom: -200px;
 }
 
 .hero-section {
@@ -153,11 +156,10 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: calc(100vh);
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
     z-index: -1;
-
     /* animates zoom effect on loading page */
     animation-name: hero-zoom;
     animation-duration: 15s;
@@ -215,6 +217,10 @@ body {
 
 .btn-primary {
     border: none;
+    color: #fff;
+    background-color: #008998;
+    font-size: 24px;
+    padding: 20px 40px;
 }
 
 /* About page */

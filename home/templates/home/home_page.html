@@ -4,45 +4,29 @@
 {% url 'booking' as booking_url %}
 
 {% block content %}
-<main class="flex-shrink-0 main-bg" id="hero-outer">
-    <div class="container-fluid hero-section">
-        <div class="home-page-container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    
+<div class="home-page">
+    <main class="flex-shrink-0 main-bg" id="hero-outer">
+        <div class="container-fluid hero-section">
+            <div class="home-page-container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <!-- Welcome message -->
 
-                    <!-- displaying Django messages -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 offset-md-2">
-                                {% for message in messages %}
-                                <div class="alert {{ message.tags }} alert-dismissible
-          fade show" id="msg" role="alert">
-                                    {{ message | safe }}
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                        aria-label="Close"></button>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
+                        <h1 class="fade-in"><span>Welcome</span> to Hair <span>by</span> Budu</h1>
 
-                    <!-- Welcome message -->
-                    
-                    <h1 class="fade-in"><span>Welcome</span> to Hair <span>by</span> Budu</h1>
-
-                    <!-- Book Now button -->
-                    <div class="row justify-content-center">
-                        <!-- <div class="col-md-6 text-center">
+                        <!-- Book Now button -->
+                        <div class="row justify-content-center">
+                            <!-- <div class="col-md-6 text-center">
                             <a href="{% url 'booking' %}" class=" btn btn-primary btn-lg animate__animated animate__bounce">Book Now</a>
                         </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </main>
+    <div class="btn btn-lg animate__animated animate__bounce home-page-booking fade-in">
+        <a href="{% url 'booking' %}" class=" btn btn-primary btn-lg animate__animated animate__bounce">Book Now</a>
     </div>
-</main>
-<div class="btn btn-lg animate__animated animate__bounce home-page-booking fade-in">
-    <a href="{% url 'booking' %}" class=" btn btn-primary btn-lg animate__animated animate__bounce">Book Now</a>
 </div>
 {% endblock %}
