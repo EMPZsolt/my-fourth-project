@@ -14,7 +14,7 @@ But Hair by Budu is not just about transforming your hair – it's about transfo
 So whether you're looking to refresh your look, revitalize your locks, or simply pamper yourself with a little self-care, Hair by Budu is here to make it happen. Get ready to embark on a hair journey like no other and discover the true potential of your locks at Hair by Budu.
 
 
-![A screenshot of this project from a mockup screenshot generator and it represents how responsive the program](./assets/images/responsive.webp)
+![A screenshot of this project from a mockup screenshot generator and it represents how responsive the program](assets/images/responsive.png)
 
 ## Table of Contents
 - [Hair by Budu](#hair-by-budu)
@@ -209,44 +209,44 @@ The following navigation items are available on all pages:
 
 The navigation menu is displayed on all pages and drops down into a hamburger menu on smaller devices. This will allow users to view the site from any device and not take up too much space on mobile devices.
 
-![Navbar](assets/images/navbar.PNG)
+![Navbar](assets/images/navbar.png)
 
 **Footer**
 
 A footer has been added to the bottom of the site, this contains a Facebook and Instagram links so that users can follow the salon on social media if they want to keep up to date with news not advertised on the website. To enhance accessibility, aria-labels have been added to the social media icons, ensuring users with assistive screen reading technology understand the purpose of the links. Additionally, these links open in new tabs to prevent users from navigating away from the site.
 
-![Footer](docs/readme_images/footer.PNG)
+![Footer](assets/images/footer.png)
 
 **Home Page**
 
 The Home page of Hair by Budu features an inviting hero image and warm greeting message, fostering a positive connection with visitors. It's designed for seamless viewing across devices, with a prominent "Book Now" button for convenient appointment scheduling. Animated elements add visual interest, while branding elements reinforce the salon's identity.
 
-![Hero Image](docs/readme_images/hero.PNG)
+![Hero Image](assets/images/home_page.png)
 
 **About Page**
 
 The About page plays a prominent role as the central point of presenting the business. This page provides users with the opportunity to learn about the salon's history, philosophy, and values while building a personal connection with the salon owner. The salon's profile image and story are presented in an engaging and captivating manner, while the owner's profile is showcased in a personalized and professional manner. The Features section details the functionalities of the About page, including dynamic content management and professional owner presentation. Administrators have full control over the content displayed on the site and can easily update the salon's history and the owner's profile. Together, these features reinforce the credibility and attractiveness of the site while fostering a personal connection between users and the business. The Hair by Budu website is a platform that not only offers hairdressing services but also provides a genuine experience and connection between visitors and the salon.
 
-![About page](docs/readme_images/about_page.PNG)
+![About page](assets/images/about_page.png)
 
 **Gallery Page**
 
 The Gallery page showcases a collection of high-quality images, allowing users to explore the salon's ambiance and diverse range of hairstyles through a slideshow. Users can easily browse through salon images to get an overview of the salon's look and offerings, as well as discover various hairstyle options.
 
-![Gallery page](docs/readme_images/gallery_page.PNG)
+![Gallery page](assets/images/gallery_page.png)
 
 **Information Page**
 
 The Information page provides users with detailed information about salon services tailored for women, men, and kids, all presented within an elegant frame, allowing them to understand the range of services offered. Users can also access the salon's opening hours to plan their visit accordingly and view the salon's location on a map for easy navigation. Additionally, accessibility information is provided to help users plan their visit considering transportation and parking options.
 
-![Services](docs/readme_images/service.PNG)
-![Loaction-Opening-Accessibility](docs/readme_images/loaction-opening-accessibility.PNG)
+![Services](assets/images/services.png)
+![Loaction-Opening-Accessibility](assets/images/loaction-opening-accessibility.png)
 
 **Booking page**
 
 The Booking page allows users to manage their haircut appointments conveniently. Users can view their existing bookings, including the name, preferred date, and time for each appointment. They also have the option to modify or delete bookings as needed. A confirmation modal is provided for deleting bookings, ensuring that users are aware of the irreversible action. Additionally, users can book a new appointment by filling out the booking form with their desired date and time. The form is equipped with CSRF protection for security. Upon submission, users receive feedback messages confirming the success of their booking. The page layout is designed to be user-friendly, with clear instructions and intuitive buttons for easy navigation. JavaScript functionality is included to enhance the user experience, ensuring smooth interactions with the booking form and confirmation modal.
 
-![Booking](docs/readme_images/book_service.PNG)
+![Booking](assets/images/book_service.png)
 
 **Booking details**
 
@@ -256,11 +256,13 @@ The JavaScript code integrated into the page enhances several aspects of functio
 
 Overall, the Booking Details page, with the integration of JavaScript functionality, offers users a smooth and intuitive experience for modifying their appointments, while also ensuring bookings adhere to the salon's operating hours for improved efficiency and accuracy.
 
-![Modify booking](docs/readme_images/booking_details.PNG)
+![Modify booking](assets/images/booking_details.png)
 
 **404 Page**
 
 As a developer, I need to implement a 404 error page to redirect users to original home page. It has been implemented and will display if a user navigates to a broken link and will allow the user to easily navigate back to the main website if they direct to a broken link / missing page, without the need  of the browsers back button.
+
+![404 error](assets/images/404-error.png)
 
 **403 Page**
 
@@ -270,6 +272,8 @@ This covers:
 * Edit Booking - Only authorized to the client who created the booking
 * Delete booking - Only authorized to the client who created the booking
 
+![403 error](assets/images/403-error.png)
+
 **500 Page**
 
 A 500 error page has been displayed to alert users when an internal server error occurs. The message relays to users that the problem is on our end, not theirs.
@@ -278,7 +282,7 @@ A 500 error page has been displayed to alert users when an internal server error
 
 A favicon was added the website to enable users to easily locate the website in the browser when multiple tabs are open.
 
-![Favicon](docs/readme_images/favicon.PNG)
+![Favicon](assets/images/favicon.png)
 
 ### Features Left To Implement
 - Integration with social media platforms for sharing customer reviews and testimonials.
@@ -305,7 +309,7 @@ The database schema adheres to relational database principles, ensuring efficien
 
 Entity relationship diagram was created using [DBEAVER](https://dbeaver.io/) and shows the schemas for each of the models and how they are related.
 
-![Entity Relationship Diagram](docs/readme_images/erd.PNG)
+![Entity Relationship Diagram](assets/images/erd.png)
 
 ### Security
 
@@ -318,7 +322,7 @@ Environment variables were stored in an env.py for local development for securit
 
 #### Color-Scheme
 
-![Image of the website's colors](./assets/images/hair-by-budu-color-palette.png)
+![Image of the website's colors](assets/images/hair-by-budu-color-palette.png)
 
 The website uses a palette of basicly pastel colors that represents the salon's main color and the rest complement it well. The color palette was created with the help of the Coolors website.
 

@@ -146,7 +146,7 @@ body {
 
 #hero-outer {
     width: 100%;
-    height: 800px;
+    height: 100%;
     overflow: hidden;
     margin-bottom: -200px;
 }
@@ -220,7 +220,7 @@ body {
     color: #fff;
     background-color: #008998;
     font-size: 24px;
-    padding: 20px 40px;
+    padding: 15px 30px;
 }
 
 /* About page */
