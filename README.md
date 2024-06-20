@@ -354,7 +354,6 @@ HTML, CSS, Javascript, Python were used to create this project.
 - Font Awesome - This was used for various icons throughout the site
 - Favicon.io - favicon files were created at https://www.meretezdat.hu/
 - TinyPNG - This was used to compress the hero image for optimal load times
-- Tiny PNG - To compress images
 - FreeConvert - To compress images in the webp format
 - Am I Responsive? - To show the website image on a range of devices
 - Paint - To cut the images to the right size
